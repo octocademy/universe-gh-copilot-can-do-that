@@ -1,0 +1,21 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+
+# Virtual Environment
+venv/
+env/
+
+# Model and Data Files
+model.pkl
+
+# IDE Specific
+.vscode/
+.idea/
+
+# OS Specific
+.DS_Store
+Thumbs.db

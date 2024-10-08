@@ -1,29 +1,99 @@
-# Flight Delay Prediction ✈️
+# Flight Delay Prediction API ✈️
 
-This repository contains a flight delay prediction application. The application uses a logistic regression model to predict the likelihood of a flight being delayed based on the day of the week and the arrival airport.
+## Description
 
-## Repository Structure 📚
+This project implements a flight delay prediction API using Flask. It predicts the likelihood of a flight being delayed based on the day of the week and the airport ID. The API leverages a pre-trained machine learning model to provide predictions.
 
-- [`client/`](https://github.com/LadyKerr/msft-build-copilot-demo/tree/927cb5d8a02a584d81dba89f6bf7eda1667039a3/client): Contains the frontend code for the application, built with React and Material-UI.
-- [`server/`](https://github.com/LadyKerr/msft-build-copilot-demo/tree/927cb5d8a02a584d81dba89f6bf7eda1667039a3/server): Contains the backend code for the application, which serves the prediction API.
-- [`data/flights.csv`](https://github.com/LadyKerr/msft-build-copilot-demo/blob/927cb5d8a02a584d81dba89f6bf7eda1667039a3/data/flights.csv): The dataset used for training the model.
-- [`manage-flight-data.ipynb`](https://github.com/LadyKerr/msft-build-copilot-demo/blob/927cb5d8a02a584d81dba89f6bf7eda1667039a3/manage-flight-data.ipynb): A Jupyter notebook that contains the data analysis and model training process.
-- [`server/model.pkl`](https://github.com/LadyKerr/msft-build-copilot-demo/blob/927cb5d8a02a584d81dba89f6bf7eda1667039a3/server/model.pkl): The trained logistic regression model.
+## Features
 
-## How to Run ⚒️
+- **Prediction Endpoint**: Predicts flight delays based on input parameters.
+- **CORS Enabled**: Allows cross-origin requests for flexibility in frontend integrations.
+- **Extensible**: Easily deployable to platforms like Azure Functions for scalable serverless deployments.
 
-1. Start the backend server by running the `server/server.py` script.
-2. Start the frontend application by running `npm run dev` in the `client/` directory.
+## Prerequisites
 
-## Features 👀
+- Python 3.8 or higher
+- pip (Python package installer)
+- `model.pkl` file containing the trained machine learning model
 
-- The application allows users to select a day of the week and an airport, and then predicts whether a flight will be delayed or not.
-- The prediction is made by a logistic regression model trained on the `flights.csv` dataset.
+## Installation
 
-## Contributing 📝
+1. **Clone the Repository**
+    ```sh
+    git clone https://github.com/your-username/flight-delay-prediction-api.git
+    cd flight-delay-prediction-api
+    ```
 
-Contributions are welcome! Please feel free to submit a pull request.
+2. **Create a Virtual Environment**
+    ```sh
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
 
-## License 🪪
+3. **Install Dependencies**
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-This project is licensed under the terms of the MIT license. See the `LICENSE` file for details.
+4. **Place the Model File**
+    Ensure the `model.pkl` file is located in the root directory of the project.
+
+## Usage
+
+1. **Run the Server**
+    ```sh
+    python server.py
+    ```
+
+2. **Access the API**
+    - Home Endpoint:
+        ```
+        GET http://localhost:5000/
+        ```
+      **Response:**
+        ```
+        Let's build a flight delay prediction api!
+        ```
+
+    - Prediction Endpoint:
+        ```
+        GET http://localhost:5000/predict?day_of_week=<DAY_OF_WEEK>&airport_id=<AIRPORT_ID>
+        ```
+      **Parameters:**
+        - `day_of_week`: Integer (0=Monday, 6=Sunday)
+        - `airport_id`: Integer representing the airport identifier
+
+      **Response:**
+        ```json
+        {
+            "model_prediction": "Not Delayed",
+            "confidence_percent": 60,
+            "delayed_percent": 40,
+            "sentence": "The flight will not be delayed."
+        }
+        ```
+
+## Example
+
+```sh
+curl "http://localhost:5000/predict?day_of_week=2&airport_id=15"
+```
+
+## Deployment
+To deploy this API as an Azure Function:
+
+Follow the Azure Functions Setup Guide to set up your environment.
+Convert the Flask routes to Azure Function HTTP triggers.
+Deploy using the Azure CLI:
+
+```sh
+az functionapp create --resource-group YourResourceGroup --consumption-plan-location YourLocation --runtime python --runtime-version 3.8 --functions-version 3 --name YourFunctionAppName --storage-account YourStorageAccount
+func azure functionapp publish YourFunctionAppName
+```
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+## License
+
+Distributed under the MIT License.

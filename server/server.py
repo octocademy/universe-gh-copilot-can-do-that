@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
-import pickle
+import joblib
 
 app = Flask(__name__)
 
@@ -16,7 +16,7 @@ def home():
 
 
 # Load the model from the file
-model = pickle.load(open('model.pkl', 'rb'))
+model = joblib.load('model.pkl')
 
 
 if __name__ == '__main__':

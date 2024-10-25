@@ -97,3 +97,10 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## License
 
 Distributed under the MIT License.
+
+## Resources to learn more
+
+- [Using GitHub Copilot in your IDE: Tips, tricks, and best practices](https://github.blog/2024-03-25-how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices/)
+- [10 unexpected ways to use GitHub Copilot](https://github.blog/2024-01-22-10-unexpected-ways-to-use-github-copilot/)
+- [How to use Github Copilot in the CLI](https://www.youtube.com/watch?v=fHwtrOcLAnI&t=32s)
+- [Prompt crafting with GitHub Copilot](https://www.youtube.com/watch?v=GPLUGJsVx0s)

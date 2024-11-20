@@ -5,7 +5,7 @@
 This project implements a flight delay prediction API using Flask. It predicts the likelihood of a flight being delayed based on the day of the week and the airport ID. The API leverages a pre-trained machine learning model to provide predictions.
 
 ### Watch the video here 🚀
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OupqM6FFbn4" frameborder="0" allowfullscreen></iframe>
+https://www.youtube.com/embed/OupqM6FFbn4
 
 
 ## Features

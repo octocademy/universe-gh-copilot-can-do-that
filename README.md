@@ -109,3 +109,5 @@ Distributed under the MIT License.
 - [How to use Github Copilot in the CLI](https://www.youtube.com/watch?v=fHwtrOcLAnI&t=32s)
 - [Prompt crafting with GitHub Copilot](https://www.youtube.com/watch?v=GPLUGJsVx0s)
 - [GitHub Copilot Metrics API GA](https://github.blog/changelog/2024-10-30-github-copilot-metrics-api-ga-release-now-available/)
+- [GitHub_Copilot_CheatSheet_Guide](https://github.com/user-attachments/files/17836574/8.5x11_Final_GitHub_Copilot_CheatSheet_Guide_Back_Purple_CMYK.pdf)
+

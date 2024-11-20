@@ -4,6 +4,10 @@
 
 This project implements a flight delay prediction API using Flask. It predicts the likelihood of a flight being delayed based on the day of the week and the airport ID. The API leverages a pre-trained machine learning model to provide predictions.
 
+### Watch the video here 🚀
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OupqM6FFbn4" frameborder="0" allowfullscreen></iframe>
+
+
 ## Features
 
 - **Prediction Endpoint**: Predicts flight delays based on input parameters.
@@ -104,3 +108,4 @@ Distributed under the MIT License.
 - [10 unexpected ways to use GitHub Copilot](https://github.blog/2024-01-22-10-unexpected-ways-to-use-github-copilot/)
 - [How to use Github Copilot in the CLI](https://www.youtube.com/watch?v=fHwtrOcLAnI&t=32s)
 - [Prompt crafting with GitHub Copilot](https://www.youtube.com/watch?v=GPLUGJsVx0s)
+- [GitHub Copilot Metrics API GA](https://github.blog/changelog/2024-10-30-github-copilot-metrics-api-ga-release-now-available/)
